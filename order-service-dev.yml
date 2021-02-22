@@ -4,3 +4,11 @@ spring:
 server:
   port: 9002 #端口
 name: order-service-dev
+
+#配置eureka server
+eureka:
+  client:
+    register-with-eureka: true #是否将自己注册到注册中心
+    fetch-registry: true
+    service-url:
+      defaultZone: http://192.168.2.110:9000/eureka/,http://192.168.2.110:9001/eureka/
